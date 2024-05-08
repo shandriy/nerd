@@ -58,7 +58,7 @@ window.addEventListener("load", function() {
   let date = new Date();
   const letters = words[0].length;
   const boxes = document.getElementById("boxes");
-  const chosenWord = words[(date.getDate() + date.getDay() + date.getFullYear() + date.getMonth()) % length].toString().toUpperCase();
+  const chosenWord = words[(date.getDay() * date.getDate() + (date.getDay() + date.getFullYear()) * date.getMonth() + date.getMonth() + date.getFullYear()) % length].toString().toUpperCase();
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const qwerty = "QWERTYUIOPASDFGHJKLZXCVBNM";
   for (let i = 0; i < rows; i++) {
