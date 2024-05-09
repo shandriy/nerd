@@ -177,7 +177,30 @@ window.addEventListener("load", function() {
               } else {
                 if (!allGreen) {
                   locked = false;
-                };
+                  if (done) {
+                    window.setTimeout(function() {
+                      const popups = document.getElementById("popups");
+                      const popup = document.createElement("div");
+                      popup.style.animationName = "empty";
+                      popup.style.animationDuration = "0s";
+                      popup.style.opacity = "1";
+                      popup.classList.add("popup");
+                      popup.innerHTML = chosenWord;
+                      popups.prepend(popup);
+                    }, 300);
+                  };
+                } else {
+                  window.setTimeout(function() {
+                    const popups = document.getElementById("popups");
+                    const popup = document.createElement("div");
+                    popup.style.animationName = "empty";
+                    popup.style.animationDuration = "0s";
+                    popup.style.opacity = "1";
+                    popup.classList.add("popup");
+                    popup.innerHTML = "Impressive";
+                    popups.prepend(popup);
+                  }, 300);
+                }
               };
             };
             flip(0);
