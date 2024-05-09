@@ -700,6 +700,7 @@ html, body {
   font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
   font-size: 1.25em;
   font-weight: bold;
+  border: none;
 }
 .wide_key {
   display: flex;
@@ -713,6 +714,7 @@ html, body {
   font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
   font-size: 0.75em;
   font-weight: bold;
+  border: none;
 }
 .green {
   background-color: #6aaa64 !important;

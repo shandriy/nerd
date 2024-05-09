@@ -101,7 +101,7 @@ window.addEventListener("load", function() {
         cursor = former;
       };
     } else {
-      if (key === "BACKSPACE" && cursor > 0 && !locked) {
+      if ((key === "BACKSPACE" || key === "BACK") && cursor > 0 && !locked) {
         guessBoxes[index - 1].innerHTML = "";
         guessBoxes[index - 1].style.border = "2px solid #ddd";
         cursor--;
