@@ -79,9 +79,8 @@ window.addEventListener("load", function() {
   let line = 0;
   let locked = false;
   let done = false;
-  window.addEventListener("keydown", function(event) {
+  function keyPressed(key) {
     const modulo = letters + 1;
-    const key = event.key.toString().toUpperCase();
     let index = cursor + line * letters;
     if (key.length === 1 && alphabet.indexOf(key) !== -1
     && !locked && cursor % modulo !== letters) {
@@ -192,5 +191,9 @@ window.addEventListener("load", function() {
         };
       };
     };
+  }
+  window.addEventListener("keydown", function(event) {
+    const key = event.key.toString().toUpperCase();
+    keyPressed(key);
   });
 });
