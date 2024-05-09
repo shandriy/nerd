@@ -196,4 +196,12 @@ window.addEventListener("load", function() {
     const key = event.key.toString().toUpperCase();
     keyPressed(key);
   });
+  const buttons = document.getElementsByTagName("button");
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function() {
+      const innerHTML = buttons[i].innerHTML;
+      const key = innerHTML.toString().toUpperCase();
+      keyPressed(key);
+    });
+  };
 });
