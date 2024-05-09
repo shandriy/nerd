@@ -182,11 +182,25 @@ window.addEventListener("load", function() {
             };
             flip(0);
           } else {
-            console.log("Not in word list");
+            const popups = document.getElementById("popups");
+            const popup = document.createElement("div");
+            popup.classList.add("popup");
+            popup.innerHTML = "Not in word list";
+            popups.prepend(popup);
+            window.setTimeout(function() {
+              popups.removeChild(popup);
+            }, 1050)
           };
         } else {
           if (!locked) {
-            console.log("Not enough letters");
+            const popups = document.getElementById("popups");
+            const popup = document.createElement("div");
+            popup.classList.add("popup");
+            popup.innerHTML = "Not enough letters";
+            popups.prepend(popup);
+            window.setTimeout(function() {
+              popups.removeChild(popup);
+            }, 1050)
           };
         };
       };
