@@ -742,6 +742,7 @@ html, body {
   width: 43.6px;
   margin: 3px;
   background-color: #ddd;
+  color: black;
   font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
   font-size: 1.25em;
   font-weight: bold;
@@ -756,6 +757,7 @@ html, body {
   width: 65.4px;
   margin: 3px;
   background-color: #ddd;
+  color: black;
   font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
   font-size: 0.75em;
   font-weight: bold;
